@@ -6,18 +6,31 @@
 /*   By: mskerba <mskerba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 08:27:35 by mskerba           #+#    #+#             */
-/*   Updated: 2022/12/10 09:56:42 by mskerba          ###   ########.fr       */
+/*   Updated: 2022/12/11 11:23:30 by mskerba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
 int main()
 {
-    std::string s = "foo";
-    std::string st = "doo";
-    Zombie *zomb;
-    zomb = newZombie(s);
-    randomChump(st);
-    delete zomb;
+    {
+        Weapon club = Weapon("crude spiked club");
+        HumanA bob("Bob", club);
+        bob.attack();
+        club.setType("some other type of club");
+        bob.attack();
+    }
+    
+    {
+        Weapon club = Weapon("crude spiked club");
+        HumanB jim("Jim");
+        jim.setWeapon(club);
+        jim.attack();
+        club.setType("some other type of club");
+        jim.attack();
+    }
+    return 0;
 }

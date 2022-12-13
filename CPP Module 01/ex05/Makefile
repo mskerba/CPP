@@ -1,6 +1,6 @@
-NAME =brainz
+NAME =harl
 
-SRC=main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
+SRC=main.cpp Harl.cpp
 
 CPPFLAGS=-Wall -Wextra -Werror -std=c++98 #-fsanitize=address -g
 

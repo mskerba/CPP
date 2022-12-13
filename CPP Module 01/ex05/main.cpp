@@ -1,32 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mskerba <mskerba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/20 06:37:45 by mskerba           #+#    #+#             */
-/*   Updated: 2022/12/10 08:31:49 by mskerba          ###   ########.fr       */
+/*   Created: 2022/12/12 10:57:54 by mskerba           #+#    #+#             */
+/*   Updated: 2022/12/13 08:41:52 by mskerba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-#define ZOMBIE_HPP
-# include <iostream>
+#include "Harl.hpp"
 
-
-class Zombie
+int main(int ac, char **av)
 {
-    private:
-        std::string name;
-    public:
-        void announce( void );
-        Zombie();
-        Zombie(std::string nm);
-        ~Zombie();
-};
+    Harl s;
 
-void randomChump(std::string name);
-Zombie* newZombie(std::string name);
-
-#endif
+    (void)ac;
+    s.complain(av[1]);
+}

@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   replace.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mskerba <mskerba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/20 06:37:45 by mskerba           #+#    #+#             */
-/*   Updated: 2022/12/10 08:31:49 by mskerba          ###   ########.fr       */
+/*   Created: 2022/12/11 16:04:14 by mskerba           #+#    #+#             */
+/*   Updated: 2022/12/12 09:29:58 by mskerba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-#define ZOMBIE_HPP
+# ifndef REPLACE_HPP
+# define REPLACE_HPP
 # include <iostream>
+# include <fstream>
 
-
-class Zombie
+namespace myfun
 {
-    private:
-        std::string name;
-    public:
-        void announce( void );
-        Zombie();
-        Zombie(std::string nm);
-        ~Zombie();
+    void replace(int l, std::string &s3, std::string s2, std::string s1);
 };
 
-void randomChump(std::string name);
-Zombie* newZombie(std::string name);
+
 
 #endif
