@@ -6,7 +6,7 @@
 /*   By: mskerba <mskerba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 08:27:35 by mskerba           #+#    #+#             */
-/*   Updated: 2022/12/12 12:40:09 by mskerba          ###   ########.fr       */
+/*   Updated: 2022/12/13 13:18:41 by mskerba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 int main(int ac, char **av)
 {
-    //error if charge string by the same
     std::ofstream    filereplace;
     std::string     fname;
     std::ifstream    file;
@@ -28,7 +27,7 @@ int main(int ac, char **av)
         file.open(fname);
         if (!file)
             return (0);
-        filereplace.open(fname + ".replace", std::ios::out);
+        filereplace.open(fname + ".replace");
         getline (file,s3);
         while (getline (file,s1))
         {
@@ -40,7 +39,9 @@ int main(int ac, char **av)
         int l = s3.find(s1);
         while(l != -1)
         { 
-            myfun::replace(l, s3, s1, s2);
+            // myfun::replace(l, s3, s1, s2);
+            s3.erase(l, s1.length());
+            s3.insert(l, s2);
             l = s3.find(s1, l + s2.length());
         }
         filereplace << s3;
