@@ -6,7 +6,7 @@
 /*   By: mskerba <mskerba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 17:48:15 by mskerba           #+#    #+#             */
-/*   Updated: 2022/12/13 09:09:41 by mskerba          ###   ########.fr       */
+/*   Updated: 2022/12/13 12:26:11 by mskerba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Harl::~Harl(){}
 
 void    Harl::complain(char *level)
 {
-    std::string allevel[4] = {"DEBUG", "ERROR", "WARNING", "INFO"};
+    std::string allevel[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
     int i = -1;
 
     while ( ++i < 4)
