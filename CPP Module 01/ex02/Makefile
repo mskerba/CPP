@@ -1,7 +1,7 @@
-NAME =brainz
+NAME =brain
 
 
-SRC=main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+SRC=main.cpp
 
 CPPFLAGS=-Wall -Wextra -Werror -std=c++98 #-fsanitize=address -g
 
