@@ -1,6 +1,6 @@
 NAME =brainz
 
-SRC=main.cpp replace.cpp
+SRC=main.cpp
 
 CPPFLAGS=-Wall -Wextra -Werror -std=c++98 #-fsanitize=address -g
 

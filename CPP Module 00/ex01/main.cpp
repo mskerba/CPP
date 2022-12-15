@@ -6,7 +6,7 @@
 /*   By: mskerba <mskerba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 11:23:15 by mskerba           #+#    #+#             */
-/*   Updated: 2022/11/21 11:16:46 by mskerba          ###   ########.fr       */
+/*   Updated: 2022/12/10 09:10:54 by mskerba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,20 +59,25 @@ void display_menu()
 int main()
 {
 	std::string	line;
-	Phonebook	phonebook;
+	// Phonebook	phonebook;
 
-	line = "";
-	while (1)
-	{
-		display_menu();
-		getline(std::cin, line);
-		if (line == "ADD")
-			phonebook = add(phonebook);
-		else if (line == "SEARCH")
-			search(phonebook);
-		else if(line == "EXIT" || std::cin.eof())
-			exit(0);
-		else
-			std::cout << "			* THI INPUT IN NOT VALID *			\n";
-	}
+	// line = "";
+	// while (1)
+	// {
+	// 	display_menu();
+	// 	getline(std::cin, line);
+	// 	if (line == "ADD")
+	// 		phonebook = add(phonebook);
+	// 	else if (line == "SEARCH")
+	// 		search(phonebook);
+	// 	else if(line == "EXIT" || std::cin.eof())
+	// 		exit(0);
+	// 	else
+	// 		std::cout << "			* THIS INPUT IN NOT VALID *			\n";
+	// }
+	line = "fddfda";
+	std::cout << line<< std::endl;
+	int i = 13;
+	line[2] = i;
+	std::cout << line<< std::endl;
 }

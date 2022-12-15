@@ -6,7 +6,7 @@
 /*   By: mskerba <mskerba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 12:33:59 by mskerba           #+#    #+#             */
-/*   Updated: 2022/12/11 10:35:24 by mskerba          ###   ########.fr       */
+/*   Updated: 2022/12/14 11:46:05 by mskerba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class Weapon
     private:
         std::string type;
     public:
-        std::string& getType();
+        const std::string& getType();
         void setType(std::string type);
         Weapon(std::string type);
         Weapon();

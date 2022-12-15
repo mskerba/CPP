@@ -6,7 +6,7 @@
 /*   By: mskerba <mskerba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 17:48:15 by mskerba           #+#    #+#             */
-/*   Updated: 2022/12/13 08:46:57 by mskerba          ###   ########.fr       */
+/*   Updated: 2022/12/13 12:23:21 by mskerba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ void    Harl::complain(std::string level)
 
     while ( ++i < 4)
         if (level == allevel[i])
-            break;
-    if (i < 4)
-        (this->*ptrFun[i])();
-    else
-        std::cout << "  ***this level is invalid***\n";
+        {
+            (this->*ptrFun[i])();
+            return ;
+        }
+    std::cout << "  ***this level is invalid***\n";
 }
 
 void    Harl::debug()

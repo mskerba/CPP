@@ -6,7 +6,7 @@
 /*   By: mskerba <mskerba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 12:34:52 by mskerba           #+#    #+#             */
-/*   Updated: 2022/12/11 10:18:40 by mskerba          ###   ########.fr       */
+/*   Updated: 2022/12/14 11:47:51 by mskerba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Weapon::Weapon(std::string type):type(type){}
 
 Weapon::~Weapon(){}
 
-std::string& Weapon::getType()
+const std::string& Weapon::getType()
 {
     return (type);
 }
