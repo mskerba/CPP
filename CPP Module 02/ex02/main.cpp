@@ -6,7 +6,7 @@
 /*   By: mskerba <mskerba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 11:02:46 by mskerba           #+#    #+#             */
-/*   Updated: 2022/12/25 16:40:52 by mskerba          ###   ########.fr       */
+/*   Updated: 2022/12/27 18:20:12 by mskerba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int main( void )
     Fixed a;
     Fixed b( Fixed( 5.05f ) + Fixed( 2 ) );
     Fixed c( Fixed( 5.05f ) - Fixed( 2 ) );
-    Fixed d( Fixed( 5.05f ) * Fixed( 2 ) );
+    Fixed d( Fixed( 5.05f ) * Fixed( 2 )* Fixed( 2 ) );
     Fixed e( Fixed( 5.05f ) / Fixed( 2 ) );
     Fixed j( e + d - c * a / b);
     std::cout <<"-->  " << a << std::endl;

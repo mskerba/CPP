@@ -6,7 +6,7 @@
 /*   By: mskerba <mskerba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 11:00:13 by mskerba           #+#    #+#             */
-/*   Updated: 2022/12/26 11:12:55 by mskerba          ###   ########.fr       */
+/*   Updated: 2022/12/27 18:17:36 by mskerba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,23 +91,22 @@ bool operator<=(const Fixed& f1, const Fixed& f2)
 
 Fixed Fixed::operator+(const Fixed& f)
 {
-    int intstore = this->getRawBits() + f.getRawBits();
-    Fixed newstore((float)intstore / (1 << 8));
+    Fixed newstore;
+    newstore.setRawBits(this->getRawBits() + f.getRawBits());
     return (newstore);
 }
 
 Fixed Fixed::operator-(const Fixed& f)
 {
-    int intstore = this->getRawBits() - f.getRawBits();
-    Fixed newstore((float)intstore / (1 << 8));
+    Fixed newstore;
+    newstore.setRawBits(this->getRawBits() - f.getRawBits());
     return (newstore);
 }
 
 Fixed Fixed::operator*(const Fixed& f)
 {
-    int intstore = this->getRawBits() * f.getRawBits();
     Fixed newstore;
-    newstore.setRawBits(intstore / (1 << 8));
+    newstore.setRawBits((this->getRawBits() * f.getRawBits()) >> 8);
     return (newstore);
 }
 

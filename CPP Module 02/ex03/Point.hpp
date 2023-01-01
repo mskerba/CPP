@@ -6,7 +6,7 @@
 /*   By: mskerba <mskerba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 09:58:06 by mskerba           #+#    #+#             */
-/*   Updated: 2022/12/26 12:00:16 by mskerba          ###   ########.fr       */
+/*   Updated: 2022/12/27 18:02:04 by mskerba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ public:
     int   getrawy( void ) const;
     ~Point();
 };
-int   area(const Point& a, const Point& b, const Point& c);
+Fixed   area(const Point& a, const Point& b, const Point& c);
 bool bsp( Point const a, Point const b, Point const c, Point const point);
 #endif

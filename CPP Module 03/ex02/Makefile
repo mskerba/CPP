@@ -1,6 +1,6 @@
 NAME =action
 
-SRC=main.cpp  ClapTrap.cpp ScavTrap.cpp FragTrap.hpp
+SRC=main.cpp  ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 
 CPPFLAGS=-Wall -Wextra -Werror -std=c++98 #-fsanitize=address -g
 
