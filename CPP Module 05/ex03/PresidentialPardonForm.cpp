@@ -6,7 +6,7 @@
 /*   By: mskerba <mskerba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 17:21:09 by mskerba           #+#    #+#             */
-/*   Updated: 2023/01/05 13:23:43 by mskerba          ###   ########.fr       */
+/*   Updated: 2023/01/05 15:44:46 by mskerba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,7 @@ void PresidentialPardonForm::execute(Bureaucrat const & executor) const
 	if(this->getisigned() && executor.getgrade() <= 5)
 		std::cout << this->target << " has been pardoned by Zaphod Beeblebrox \n";
 	else
-		throw PresidentialPardonForm::GradeTooHighException();
-}
-
-std::ostream& operator<<(std::ostream& out,PresidentialPardonForm& bu)
-{
-	out << bu.getname() << ", PresidentialPardonForm grade " << bu.getgrade() << std::endl;
-	return (out);
+		throw PresidentialPardonForm::GradeTooLowException();
 }
 
 PresidentialPardonForm::~PresidentialPardonForm(){}

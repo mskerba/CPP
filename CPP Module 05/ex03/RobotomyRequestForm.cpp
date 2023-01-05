@@ -6,11 +6,12 @@
 /*   By: mskerba <mskerba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 16:05:40 by mskerba           #+#    #+#             */
-/*   Updated: 2023/01/05 13:26:02 by mskerba          ###   ########.fr       */
+/*   Updated: 2023/01/05 15:48:49 by mskerba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
+#include <time.h>
 
 RobotomyRequestForm::RobotomyRequestForm::RobotomyRequestForm():Form(){}
 
@@ -32,8 +33,11 @@ RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& o
 
 void RobotomyRequestForm::execute(Bureaucrat const & executor) const
 {
+	srand(time(0));
 	if(this->getisigned() && executor.getgrade() <= 45)
 	{
+		std::cout << "zzzzzzzzzzzzzzzzzzzzz" << std::endl;
+		
 		if(rand() % 2)
 			std::cout << this->target << " has been robotomized successfully \n";
 		else
@@ -41,12 +45,6 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor) const
 	}
 	else
 		throw RobotomyRequestForm::GradeTooHighException();
-}
-
-std::ostream& operator<<(std::ostream& out,RobotomyRequestForm& bu)
-{
-	out << bu.getname() << ", RobotomyRequestForm grade " << bu.getgrade() << std::endl;
-	return (out);
 }
 
 RobotomyRequestForm::~RobotomyRequestForm(){}

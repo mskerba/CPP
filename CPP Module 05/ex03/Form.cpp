@@ -6,7 +6,7 @@
 /*   By: mskerba <mskerba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 13:05:54 by mskerba           #+#    #+#             */
-/*   Updated: 2023/01/05 13:41:09 by mskerba          ###   ########.fr       */
+/*   Updated: 2023/01/05 15:46:30 by mskerba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,16 @@ void Form::beSigned(Bureaucrat& b)
 	else
 		throw Form::GradeTooLowException();
 }
+
+const char* Form::GradeTooHighException::what() const _NOEXCEPT
+{
+	return "The Form grade is too high"; 
+}
+
+const char* Form::GradeTooLowException::what() const _NOEXCEPT
+{
+	return "The Form grade is too low"; 
+};
 
 std::ostream& operator<<(std::ostream& out,Form& bu)
 {

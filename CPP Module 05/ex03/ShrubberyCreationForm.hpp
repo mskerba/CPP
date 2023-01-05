@@ -6,7 +6,7 @@
 /*   By: mskerba <mskerba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 11:14:48 by mskerba           #+#    #+#             */
-/*   Updated: 2023/01/05 13:42:13 by mskerba          ###   ########.fr       */
+/*   Updated: 2023/01/05 15:24:35 by mskerba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,5 @@ public:
 	void execute(Bureaucrat const & executor) const;
 	~ShrubberyCreationForm();
 };
-
-std::ostream& operator<<(std::ostream& out, ShrubberyCreationForm& bu);
 
 #endif
