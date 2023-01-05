@@ -6,7 +6,7 @@
 /*   By: mskerba <mskerba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 12:42:14 by mskerba           #+#    #+#             */
-/*   Updated: 2023/01/01 18:26:46 by mskerba          ###   ########.fr       */
+/*   Updated: 2023/01/02 08:36:48 by mskerba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 int main()
 {
+	// Animal a;
+
 	Animal *j[10];
 	int i = 0;
 	for (; i < 5; i++)
@@ -26,4 +28,3 @@ int main()
 		delete  j[i];
 	return 0;
 }
-

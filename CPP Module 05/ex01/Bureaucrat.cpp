@@ -6,7 +6,7 @@
 /*   By: mskerba <mskerba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/01 18:37:40 by mskerba           #+#    #+#             */
-/*   Updated: 2023/01/03 15:05:26 by mskerba          ###   ########.fr       */
+/*   Updated: 2023/01/04 17:58:29 by mskerba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,19 @@ std::string Bureaucrat::getname() const
 int Bureaucrat::getgrade() const
 {
 	return (this->grade);
+}
+
+void Bureaucrat::signForm(Form& form)
+{
+	try
+	{
+		form.beSigned(*this);
+		std::cout << this->getname() << " signed " << form.getname() << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cout << this->getname() << " couldn’t sign " << form.getname() << " because " << e.what() << std::endl;
+	}
 }
 
 std::ostream& operator<<(std::ostream& out,Bureaucrat& bu)

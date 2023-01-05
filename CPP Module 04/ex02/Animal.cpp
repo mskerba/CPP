@@ -6,7 +6,7 @@
 /*   By: mskerba <mskerba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 16:02:00 by mskerba           #+#    #+#             */
-/*   Updated: 2023/01/01 18:04:23 by mskerba          ###   ########.fr       */
+/*   Updated: 2023/01/02 08:37:26 by mskerba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,4 @@ std::string Animal::getType(void) const
 	return (this->type);
 }
 
-
-Animal::~Animal()
-{
-	std::cout << "Animale destructors is called!\n";
-}
+Animal::~Animal(){}

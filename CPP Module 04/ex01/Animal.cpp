@@ -6,7 +6,7 @@
 /*   By: mskerba <mskerba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 16:02:00 by mskerba           #+#    #+#             */
-/*   Updated: 2023/01/01 12:40:42 by mskerba          ###   ########.fr       */
+/*   Updated: 2023/01/02 08:33:38 by mskerba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ Animal& Animal::operator=(const Animal& other)
 
 void Animal::makeSound(void) const
 {
-		std::cout << "Animal" << std::endl;
+	std::cout << "Animal" << std::endl;
 }
 
 std::string Animal::getType(void) const

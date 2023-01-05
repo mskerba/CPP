@@ -1,41 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Intern.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mskerba <mskerba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/03 10:39:16 by mskerba           #+#    #+#             */
-/*   Updated: 2023/01/03 15:06:57 by mskerba          ###   ########.fr       */
+/*   Created: 2023/01/05 10:03:09 by mskerba           #+#    #+#             */
+/*   Updated: 2023/01/05 10:36:06 by mskerba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+# ifndef INTERN_HPP
+# define INTERN_HPP
+# include "Form.hpp"
 
-int main()
+
+class Intern
 {
-	Bureaucrat a("fff", 3);
-	try
-	{
-		while(1)
-		{
-			std::cout << a;
-			a.decrementgrade();
-		}
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << '\n';
-	}
-	Bureaucrat b(a);
-	try
-	{
-		std::cout << b;
-		b.decrementgrade();
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << '\n';
-	}
-	
-}
+public:
+	Intern();
+	Form* makeForm(std::string name, std::string target);
+	~Intern();
+};
+
+
+
+#endif

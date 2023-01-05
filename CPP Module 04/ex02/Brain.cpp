@@ -6,7 +6,7 @@
 /*   By: mskerba <mskerba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 15:35:15 by mskerba           #+#    #+#             */
-/*   Updated: 2023/01/01 17:49:35 by mskerba          ###   ########.fr       */
+/*   Updated: 2023/01/02 08:37:37 by mskerba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ Brain& Brain::operator=(const Brain& obj)
 
 std::string Brain::getIdeas(int i) const
 {
-	// std::cout << this->ideas[i]<< std::endl;
 	return (this->ideas[i]);
 }
 
@@ -40,7 +39,6 @@ void Brain::setIdeas(std::string id, int i)
 {
 	this->ideas[i % 100] = id;
 }
-
 
 Brain::~Brain()
 {

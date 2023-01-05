@@ -6,7 +6,7 @@
 /*   By: mskerba <mskerba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/01 18:33:56 by mskerba           #+#    #+#             */
-/*   Updated: 2023/01/03 12:59:44 by mskerba          ###   ########.fr       */
+/*   Updated: 2023/01/04 10:06:59 by mskerba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 # define BUREAUCRAT_HPP
 # include <iostream>
 # include <stdexcept>
+# include "Form.hpp"
+
+class Form;
 
 class Bureaucrat
 {
@@ -30,7 +33,7 @@ public:
    	public:
 		const char* what() const _NOEXCEPT
 		{
-			return "The grade is too high"; 
+			return "The Bureaucrat grade is too high"; 
 		};
   	};
 	class GradeTooLowException : public std::exception
@@ -38,11 +41,12 @@ public:
    	public:
 		const char* what() const _NOEXCEPT
 		{
-			return "The grade is too low"; 
+			return "The Bureaucrat grade is too low"; 
 		};
   	};
 	std::string getname() const;
 	int  getgrade()const;
+	void signForm(Form& form);
 	void incrementgrade();
 	void decrementgrade();
 	~Bureaucrat();
