@@ -6,7 +6,7 @@
 /*   By: mskerba <mskerba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 11:27:12 by mskerba           #+#    #+#             */
-/*   Updated: 2023/01/05 13:27:29 by mskerba          ###   ########.fr       */
+/*   Updated: 2023/01/05 15:25:09 by mskerba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 		std::string tree = "      .  .  .    .  .     ..    .          \n   .                 .         .  .        \n                   .               .       \n   .               .                .. .   \n  .          .            .              . \n  .            '.,        .               .\n  .              'b      *                 \n   .              '$    #.                .\n  .    .           $:   #:               . \n..      .  ..      *#  @):        .   . .  \n             .     :@,@):   ,.**:'   .     \n .      .,         :@@*: ..**'      .   .  \n          '#o.    .:(@'.@* '  .            \n  .  .       'bq,..:,@@*'   ,*      .  .   \n             ,p$q8,:@)'  .p*'      .       \n      .     '  . '@@Pp@@*'    .  .         \n       .  . ..    Y7'.'     .  .           \n                 :@):.                     \n                .:@:'.                     \n              .::(@:.                      \n";
         file.open(this->target + "_shrubbery");
         if (!file)
-            return ;
+            exit(0);
 		
 		file << tree;
         file.close();
@@ -48,10 +48,5 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 		throw ShrubberyCreationForm::GradeTooLowException();
 }
 
-std::ostream& operator<<(std::ostream& out,ShrubberyCreationForm& bu)
-{
-	out << bu.getname() << ", ShrubberyCreationForm grade " << bu.getgrade() << std::endl;
-	return (out);
-}
 
 ShrubberyCreationForm::~ShrubberyCreationForm(){}

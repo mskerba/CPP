@@ -6,7 +6,7 @@
 /*   By: mskerba <mskerba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 17:12:49 by mskerba           #+#    #+#             */
-/*   Updated: 2023/01/05 13:42:00 by mskerba          ###   ########.fr       */
+/*   Updated: 2023/01/05 15:23:22 by mskerba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,5 @@ public:
 	void execute(Bureaucrat const & executor) const;
 	~RobotomyRequestForm();
 };
-
-std::ostream& operator<<(std::ostream& out, RobotomyRequestForm& bu);
 
 #endif

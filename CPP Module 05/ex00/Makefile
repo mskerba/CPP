@@ -1,4 +1,4 @@
-NAME =ex00
+NAME =Bureaucrat
 
 SRC=main.cpp Bureaucrat.cpp
 

@@ -6,7 +6,7 @@
 /*   By: mskerba <mskerba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 17:23:51 by mskerba           #+#    #+#             */
-/*   Updated: 2023/01/05 13:41:39 by mskerba          ###   ########.fr       */
+/*   Updated: 2023/01/05 15:44:46 by mskerba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,5 @@ public:
 	void execute(Bureaucrat const & executor) const;
 	~PresidentialPardonForm();
 };
-
-std::ostream& operator<<(std::ostream& out, PresidentialPardonForm& bu);
 
 #endif

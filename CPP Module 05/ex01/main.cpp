@@ -6,7 +6,7 @@
 /*   By: mskerba <mskerba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 10:39:16 by mskerba           #+#    #+#             */
-/*   Updated: 2023/01/04 10:07:31 by mskerba          ###   ########.fr       */
+/*   Updated: 2023/01/06 10:22:49 by mskerba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,15 @@ int main()
 {
 	try
 	{
-		Bureaucrat a("fff", 3);
+		Bureaucrat b("fff", 3);
+		Form form("bob", 40);
+
+		std::cout << ((form.getisigned())? "yes" : "no") <<std::endl;
+		form.beSigned(b);
+		std::cout << ((form.getisigned())? "yes" : "no") <<std::endl;
+		b.signForm(form);
 		while(1)
-			a.decrementgrade();
-		std::cout << "kkk\n";
+			b.decrementgrade();
 	}
 	catch(const std::exception& e)
 	{

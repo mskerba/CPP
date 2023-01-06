@@ -6,7 +6,7 @@
 /*   By: mskerba <mskerba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 13:05:54 by mskerba           #+#    #+#             */
-/*   Updated: 2023/01/05 13:38:34 by mskerba          ###   ########.fr       */
+/*   Updated: 2023/01/05 15:26:51 by mskerba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,10 +48,9 @@ int Form::getgrade() const
 
 void Form::beSigned(Bureaucrat& b)
 {
-	if(b.getgrade() <=  this->grade_s)
-		isigned = true;
-	else
+	if(b.getgrade() >  this->grade_s)
 		throw Form::GradeTooLowException();
+	isigned = true;
 }
 
 bool Form::getisigned() const
