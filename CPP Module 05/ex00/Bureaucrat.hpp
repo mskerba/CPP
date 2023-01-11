@@ -6,7 +6,7 @@
 /*   By: mskerba <mskerba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/01 18:33:56 by mskerba           #+#    #+#             */
-/*   Updated: 2023/01/05 15:29:10 by mskerba          ###   ########.fr       */
+/*   Updated: 2023/01/08 12:55:40 by mskerba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,12 @@ public:
 	class GradeTooHighException : public std::exception
 	{
    	public:
-		const char* what() const _NOEXCEPT;
+		const char* what() const throw();
   	};
 	class GradeTooLowException : public std::exception
 	{
    	public:
-		const char* what() const _NOEXCEPT;
+		const char* what() const throw();
   	};
 	std::string getname() const;
 	int  getgrade()const;

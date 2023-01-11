@@ -6,7 +6,7 @@
 /*   By: mskerba <mskerba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 12:42:14 by mskerba           #+#    #+#             */
-/*   Updated: 2023/01/02 08:34:30 by mskerba          ###   ########.fr       */
+/*   Updated: 2023/01/09 10:03:31 by mskerba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 #include <unistd.h>
 int main()
 {
+	Animal *a = new Dog();
+	Animal *b = new Cat();
+	a = b;
 
     Cat d;
     for(int i = 0 ; i < 100 ; i++)

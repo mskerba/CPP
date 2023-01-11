@@ -6,7 +6,7 @@
 /*   By: mskerba <mskerba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 13:05:54 by mskerba           #+#    #+#             */
-/*   Updated: 2023/01/05 15:46:30 by mskerba          ###   ########.fr       */
+/*   Updated: 2023/01/08 12:55:40 by mskerba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,12 +58,12 @@ void Form::beSigned(Bureaucrat& b)
 		throw Form::GradeTooLowException();
 }
 
-const char* Form::GradeTooHighException::what() const _NOEXCEPT
+const char* Form::GradeTooHighException::what() const throw()
 {
 	return "The Form grade is too high"; 
 }
 
-const char* Form::GradeTooLowException::what() const _NOEXCEPT
+const char* Form::GradeTooLowException::what() const throw()
 {
 	return "The Form grade is too low"; 
 };

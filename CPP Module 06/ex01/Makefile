@@ -1,6 +1,6 @@
-NAME =template
+NAME =Serialization
 
-SRC=main.cpp
+SRC=main.cpp Serialization.cpp
 
 CPPFLAGS=-Wall -Wextra -Werror -std=c++98 #-fsanitize=address -g
 

@@ -1,2 +1,13 @@
+#include <iostream>
 
-"      .  .  .    .  .     ..    .          \n   .                 .         .  .        \n                   .               .       \n   .               .                .. .   \n  .          .            .              . \n  .            '.,        .               .\n  .              'b      *                 \n   .              '$    #.                .\n  .    .           $:   #:               . \n..      .  ..      *#  @):        .   . .  \n             .     :@,@):   ,.**:'   .     \n .      .,         :@@*: ..**'      .   .  \n          '#o.    .:(@'.@* '  .            \n  .  .       'bq,..:,@@*'   ,*      .  .   \n             ,p$q8,:@)'  .p*'      .       \n      .     '  . '@@Pp@@*'    .  .         \n       .  . ..    Y7'.'     .  .           \n                 :@):.                     \n                .:@:'.                     \n              .::(@:.                      \n"
+int main()
+{
+    int x { 10 };
+    int y { 4 };
+
+    // static cast x to a double so we get floating point division
+    double d = static_cast<double>(x) / y ;
+    std::cout << d; // prints 2.5
+uintptr_t
+    return 0;
+}

@@ -6,7 +6,7 @@
 /*   By: mskerba <mskerba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 10:03:07 by mskerba           #+#    #+#             */
-/*   Updated: 2023/01/05 15:05:25 by mskerba          ###   ########.fr       */
+/*   Updated: 2023/01/08 13:00:54 by mskerba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,17 @@
 
 
 Intern::Intern(){}
+
+Intern::Intern(const Intern& obj)
+{
+	*this = obj;	
+}
+
+Intern& Intern::operator=(const Intern& obj)
+{
+	(void)obj;
+	return (*this);
+}
 
 Form* Intern::makeForm(std::string name, std::string target)
 {
@@ -36,7 +47,7 @@ Form* Intern::makeForm(std::string name, std::string target)
 	throw Intern::FormNameDoesExist();
 }
 
-const char* Intern::FormNameDoesExist::what() const _NOEXCEPT
+const char* Intern::FormNameDoesExist::what() const throw()
 {
 	return ("Form name passed as parameter doesn’t exist"); 
 }
@@ -44,5 +55,3 @@ const char* Intern::FormNameDoesExist::what() const _NOEXCEPT
 Intern::~Intern(){}
 
 
-
-//;

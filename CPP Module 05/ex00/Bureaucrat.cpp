@@ -6,7 +6,7 @@
 /*   By: mskerba <mskerba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/01 18:37:40 by mskerba           #+#    #+#             */
-/*   Updated: 2023/01/05 15:29:42 by mskerba          ###   ########.fr       */
+/*   Updated: 2023/01/08 12:55:40 by mskerba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,12 +64,12 @@ std::ostream& operator<<(std::ostream& out,Bureaucrat& bu)
 	return (out);
 }
 
-const char* Bureaucrat::GradeTooLowException::what() const _NOEXCEPT
+const char* Bureaucrat::GradeTooLowException::what() const throw()
 {
 	return "The grade is too low"; 
 };
 
-const char* Bureaucrat::GradeTooHighException::what() const _NOEXCEPT
+const char* Bureaucrat::GradeTooHighException::what() const throw()
 {
 	return "The grade is too high"; 
 };

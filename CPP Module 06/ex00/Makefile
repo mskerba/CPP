@@ -1,6 +1,6 @@
-NAME =template
+NAME =ex00
 
-SRC=main.cpp
+SRC=main.cpp 
 
 CPPFLAGS=-Wall -Wextra -Werror -std=c++98 #-fsanitize=address -g
 

@@ -6,7 +6,7 @@
 /*   By: mskerba <mskerba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 13:06:05 by mskerba           #+#    #+#             */
-/*   Updated: 2023/01/04 11:11:05 by mskerba          ###   ########.fr       */
+/*   Updated: 2023/01/08 12:55:40 by mskerba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ public:
 	class GradeTooHighException : public std::exception
 	{
    	public:
-		const char* what() const _NOEXCEPT
+		const char* what() const throw()
 		{
 			return "The Form grade is too high"; 
 		};
@@ -39,7 +39,7 @@ public:
 	class GradeTooLowException : public std::exception
 	{
    	public:
-		const char* what() const _NOEXCEPT
+		const char* what() const throw()
 		{
 			return "The Form grade is too low"; 
 		};
